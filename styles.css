@@ -1,0 +1,182 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --attribution-pink: hsl(356, 100%, 78%);
+    --attribution-hover: hsl(356,	100%,	70%);
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* neutrals */
+    --dark-blue-bg: hsl(217, 54%, 11%);
+    --blue-cbg: hsl(216, 50%, 16%);
+    --light-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* typography */
+    --font-primary: "Outfit", sans-serif;
+
+    --transition: all 0.3s linear;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--font-primary);
+}
+ul {
+    list-style: none;
+}
+.attribution { 
+  font-size: 12px; text-align: center;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+.attribution a { 
+  color: var(--attribution-pink);
+  transition: var(--transition);
+}
+.attribution a:hover {
+  color: var(--attribution-hover);
+}
+/*
+=============== 
+Design
+===============
+*/
+body {
+  background-color: var(--dark-blue-bg);
+}
+.wrapper {
+  width: min-content;
+  background-color: var(--blue-cbg);
+  border-radius: 10px;
+  text-align: center;
+  margin: 10vh auto;
+  box-shadow: rgba(0, 0, 0, 0.08) 5px 10px 10px 15px;
+}
+.photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  margin: 1rem;
+  padding-top: 1rem;
+  transition: var(--transition);
+}
+.card-photo {
+  border-radius: 10px;
+}
+.photo-active {
+  position: absolute;
+  width: 100%;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.view-icon {
+  position: absolute;
+}
+.card-text {
+  text-align: left;
+  margin: 0 1.5rem;
+}
+h1 {
+  color: var(--white);
+  padding-bottom: 0.5rem;
+  transition: var(--transition);
+  font-size: 16px;
+}
+h2 {
+  color: var(--soft-blue);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+  font-size: 12px;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+.card-info img {
+  padding-right: 0.25rem;
+}
+h3 {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+}
+h4 {
+  color: var(--soft-blue);
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--light-blue);
+  padding-bottom: 0.5rem;
+}
+.creator {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.75rem;
+}
+.creator-photo {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 0.5rem
+}
+.creator p {
+  color: var(--soft-blue);
+  word-spacing: 2px;
+  font-size: 10px;
+}
+.creator a {
+  color: var(--white);
+  transition: var(--transition);
+}
+.photo-active:hover {
+  cursor: pointer;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 1;
+  transition: var(--transition);
+}
+h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+  opacity: 1;
+  transition: var(--transition);
+}
+.creator a:hover {
+  cursor: pointer;
+  color: var(--cyan);
+  transition: var(--transition);
+}
